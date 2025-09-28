@@ -13,5 +13,8 @@ func main() {
 		})
 	})
 
-	app.Listen(":4000")
+	err := app.Listen(":4000")
+	if err != nil {
+		return
+	}
 }
